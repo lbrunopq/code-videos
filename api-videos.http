@@ -1,8 +1,66 @@
 
+### category-store
+POST http://host.docker.internal:8000/api/categories
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Primeira principal"
+}
+
+### category-update
+PUT http://host.docker.internal:8000/api/categories/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Categoria",
+  "is_active": false
+}
+
+
 ### category-list
 GET http://host.docker.internal:8000/api/categories
 Accept: application/json
 
 ### category-show
-GET http://host.docker.internal:8000/api/categories/100
+GET http://host.docker.internal:8000/api/categories/1
+Accept: application/json
+
+### category-delete
+DELETE http://host.docker.internal:8000/api/categories/2
+Accept: application/json
+
+
+
+### genre-store
+POST http://host.docker.internal:8000/api/genres
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Infantil",
+  "is_active": false
+}
+
+### genre-update
+PUT http://host.docker.internal:8000/api/genres/21
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Infantil",
+  "is_active": false
+}
+
+### genre-list
+GET http://host.docker.internal:8000/api/genres
+Accept: application/json
+
+### genre-show
+GET http://host.docker.internal:8000/api/genres/21
+Accept: application/json
+
+### genre-delete
+DELETE http://host.docker.internal:8000/api/genres/21
 Accept: application/json
